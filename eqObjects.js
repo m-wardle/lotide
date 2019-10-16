@@ -29,9 +29,8 @@ const eqObjects = function(obj1, obj2) {
     return false;
   } else {
     for (let key of keys1) {
-      console.log(obj1[key], obj2[key]);
       if (!obj2[key]) {
-        console.log("didn't match");
+       
         return false;
       } else if ((Array.isArray(obj1[key]) && Array.isArray(obj2[key])) ? !eqArrays(obj1[key], obj2[key]) : obj1[key] !== obj2[key]) {
         return false;
