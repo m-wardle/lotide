@@ -17,7 +17,7 @@ const eqArrays = function(arrayOne, arrayTwo) {
   }
 
   return true;
-}
+};
 
 // Object Equality Assertion Function
 
@@ -26,26 +26,26 @@ const eqObjects = function(obj1, obj2) {
   let keys2 = Object.keys(obj2);
 
   if (keys1.length > keys2.length || keys2.length > keys1.length) {
-    return false
+    return false;
   } else {
     for (let key of keys1) {
-      console.log(obj1[key], obj2[key])
+      console.log(obj1[key], obj2[key]);
       if (!obj2[key]) {
         console.log("didn't match");
-        return false
+        return false;
       } else if ((Array.isArray(obj1[key]) && Array.isArray(obj2[key])) ? !eqArrays(obj1[key], obj2[key]) : obj1[key] !== obj2[key]) {
         return false;
       }
     }
-    return true
+    return true;
   }
-}
+};
 
 // Test Cases
 
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
-assertEqual(eqObjects(ab, ba), true)
+assertEqual(eqObjects(ab, ba), true);
 
 const abc = { a: "1", b: "2", c: "3" };
 assertEqual(eqObjects(ab, abc), false);
