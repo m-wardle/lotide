@@ -46,8 +46,6 @@ const objs = [
 ];
 assertArraysEqual(map(objs, x => x.name), ['Katy', 'Ed', 'Jesse']);
 
-// assertArraysEqual(map(objs, x => {if (x.age > 18) {x.canVote = true} else {x.canVote = false}}),);
-
 map(objs, x => {
   if (x.age > 18) {
     x.canVote = true;
