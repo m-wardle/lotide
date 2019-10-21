@@ -1,9 +1,9 @@
 // Test/Assertion Functions
 
-const assertEqual = function(actual, expected) {
-  let result = (actual === expected ? `✅✅✅ Assertion Passed: ${actual} === ${expected}.` : `❌❌❌ Assertion Failed: ${actual} !== ${expected}.`);
-  console.log(result);
-};
+// const assertEqual = function(actual, expected) {
+//   let result = (actual === expected ? `✅✅✅ Assertion Passed: ${actual} === ${expected}.` : `❌❌❌ Assertion Failed: ${actual} !== ${expected}.`);
+//   console.log(result);
+// };
 
 // countLetters Function
 
@@ -51,7 +51,9 @@ const countLetters = function(string) {
 return result;
 }
 
+module.exports = countLetters;
+
 // Test Cases
 
-console.log(countLetters('Hello'))
-console.log(countLetters("Hello, I'm typing out the whole alphabet unnecessarily!!"))
+// console.log(countLetters('Hello'))
+// console.log(countLetters("Hello, I'm typing out the whole alphabet unnecessarily!!"))

@@ -1,9 +1,9 @@
-// Test/Assertion Functions
+// // Test/Assertion Functions
 
-const assertEqual = function(actual, expected) {
-  let result = (actual === expected ? `✅✅✅ Assertion Passed: ${actual} === ${expected}.` : `❌❌❌ Assertion Failed: ${actual} !== ${expected}.`);
-  console.log(result);
-};
+// const assertEqual = function(actual, expected) {
+//   let result = (actual === expected ? `✅✅✅ Assertion Passed: ${actual} === ${expected}.` : `❌❌❌ Assertion Failed: ${actual} !== ${expected}.`);
+//   console.log(result);
+// };
 
 // countOnly Function
 
@@ -21,26 +21,28 @@ for (const item of allItems) {
     }
   }
 }
-console.log(results)
+
 return results;
 }
 
+module.exports = countOnly;
+
 // Test Cases
 
-const firstNames = [
-  "Karl",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang",
-  "Joe"
-];
+// const firstNames = [
+//   "Karl",
+//   "Salima",
+//   "Agouhanna",
+//   "Fang",
+//   "Kavith",
+//   "Jason",
+//   "Salima",
+//   "Fang",
+//   "Joe"
+// ];
 
-const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true });
+// const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true });
 
-assertEqual(result1["Jason"], 1);
-assertEqual(result1["Karima"], undefined);
-assertEqual(result1["Fang"], 2);
+// assertEqual(result1["Jason"], 1);
+// assertEqual(result1["Karima"], undefined);
+// assertEqual(result1["Fang"], 2);
