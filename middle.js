@@ -1,26 +1,3 @@
-// Test/Assertion Functions
-
-const eqArrays = function(arrayOne, arrayTwo) {
-  if (arrayOne.length !== arrayTwo.length) {
-    return false;
-  }
-  
-  for (let i = 0; i < arrayOne.length; i++) {
-    if (arrayOne[i] !== arrayTwo[i]) {
-      return false;
-    }
-  }
-
-  return true;
-};
-
-const assertArraysEqual = function(arrayOne, arrayTwo) {
-  let result = (eqArrays(arrayOne, arrayTwo) ? `✅✅✅ Assertion Passed: ${arrayOne} === ${arrayTwo}.` : `❌❌❌ Assertion Failed: ${arrayOne} !== ${arrayTwo}.`);
-  console.log(result);
-};
-
-// Middle-Finding Function
-
 const middle = function(array) {
   let middleArray = [];
   let midPoint = array.length / 2;
@@ -36,9 +13,4 @@ const middle = function(array) {
   }
 };
 
-// Test Cases
-
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
-assertArraysEqual(middle([1, 2]), []);
-assertArraysEqual(middle([1]), []);
+module.exports = middle;
