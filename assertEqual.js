@@ -4,10 +4,4 @@ const assertEqual = function(actual, expected) {
   console.log(result);
 };
 
-// TEST CODE
-
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual("TesT", "Test");
-assertEqual("TesT", "TesT");
-assertEqual(1, 2);
+module.exports = assertEqual;
