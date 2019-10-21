@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@m-wardle/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "A mini clone of the [Lodash](https://lodash.com) library.",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/m-wardle/lotide.git"
   },
-  "author": "",
+  "author": "\"Matt Wardle <mwardle.22@gmail.com> (github.com/m-wardle)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/m-wardle/lotide/issues"
