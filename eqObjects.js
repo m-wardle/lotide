@@ -1,10 +1,4 @@
-// Assertion/Test Functions
-
-const assertEqual = require('./assertEqual');
-
 const eqArrays = require('./eqArrays');
-
-// Object Equality Assertion Function
 
 const eqObjects = function(obj1, obj2) {
   let keys1 = Object.keys(obj1);
@@ -12,17 +6,25 @@ const eqObjects = function(obj1, obj2) {
 
   if (keys1.length > keys2.length || keys2.length > keys1.length) {
     return false;
-  } else {
-    for (let key of keys1) {
-      if (!obj2[key]) {
-       
-        return false;
-      } else if ((Array.isArray(obj1[key]) && Array.isArray(obj2[key])) ? !eqArrays(obj1[key], obj2[key]) : obj1[key] !== obj2[key]) {
-        return false;
+  } 
+
+  for (let i in obj1) {
+    if (!obj2[i]) {
+      return false;
+    } else if (Array.isArray(obj1[i]) && Array.isArray(obj2[i])) {
+      if (eqArrays(obj1[i], obj2[i])) {
+        return true;
       }
+    } else if ((typeof obj1[i] !== 'object') && (typeof obj2[i] !== 'object')) {
+      if (obj1[i] === obj2[i]) {
+        return true
+      }
+    } else if ((typeof obj1[i] === 'object') && (typeof obj2[i] === 'object')) {
+      return eqObjects(obj1[i], obj2[i])
+    } else {
+      return false;
     }
-    return true;
   }
-};
+}
 
 module.exports = eqObjects;
